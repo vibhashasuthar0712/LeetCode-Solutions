@@ -212,7 +212,7 @@ The result format is shown in the following example.
 
 Example 1:
 
-Input: 
+Input:
 Teacher table:
 +------------+------------+---------+
 | teacher_id | subject_id | dept_id |
