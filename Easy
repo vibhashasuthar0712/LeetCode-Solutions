@@ -298,3 +298,13 @@ Kalel's manager is employee 11, who is still in the company (Joziah).
 Joziah's manager is employee 6, who left the company because there is no row for employee 6 as it was deleted.
 
 SOLUTION:
+SELECT e.employee_id
+FROM Employees e
+WHERE e.salary < 30000
+  AND e.manager_id IS NOT NULL
+  AND NOT EXISTS (
+      SELECT 1
+      FROM Employees m
+      WHERE m.employee_id = e.manager_id
+  )
+ORDER BY e.employee_id;
