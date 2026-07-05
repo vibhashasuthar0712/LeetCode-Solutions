@@ -88,8 +88,6 @@ Return all sales entries for that product in that year.
 Return a table with the following columns: product_id, first_year, quantity, and price.
 Return the result in any order.
 
- 
-
 Example 1:
 
 Input: 
