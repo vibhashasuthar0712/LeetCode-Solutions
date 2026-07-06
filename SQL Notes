@@ -13,3 +13,11 @@ FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER
 -------------------------------------------------------------------------------------------------------------------------------------
 (SELECT):
 SELECT is an sql command used to retrieve data from one or multiple tables in dataset.
+
+Eg. display all employees data from Employees table.
+    SELECT * FROM Employees;
+
+EXPLANATION: Here, we use SELECT command for retrieve all information or retrieve all columns of employee from Employees data. 
+ so, SELECT : tells what we want to retrieve
+     FROM : tells from where you get this data or which table you retrieve it.
+            
