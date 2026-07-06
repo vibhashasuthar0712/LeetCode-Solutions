@@ -20,7 +20,8 @@ Eg. display all employees data from Employees table.
 EXPLANATION: Here, we use SELECT command for retrieve all information or retrieve all columns of employee from Employees data. 
  so, SELECT : tells what we want to retrieve
      FROM : tells from where you get this data or which table you retrieve it.
-            
+
+Note: (*) this asteric is used when you want to retrieve all the columns of your table.
 
 2) (WHERE):
 WHERE is a clause used in sql to filter rows based on specific condition. It is used within statements like SELECT , UPDATE , DELETE.
