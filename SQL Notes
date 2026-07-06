@@ -1,8 +1,10 @@
 Here you find the SQL Concepts:
 SQL: Structured Query Language
+Introduction
 
-INTRODUCTION:
-It is a type of language which we used to works with large datasets while excel is not able to handle this messy data.
+SQL (Structured Query Language) is a language used to manage and query data stored in relational databases.
+It is especially useful for working with large datasets that are difficult to manage in applications like Microsoft Excel.
+
 
 Writing sql command path order:
 SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> DISTINCT -> ORDER BY -> LIMIT
