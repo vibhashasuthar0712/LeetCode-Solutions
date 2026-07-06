@@ -6,8 +6,10 @@ SQL (Structured Query Language) is a language used to manage and query data stor
 It is especially useful for working with large datasets that are difficult to manage in applications like Microsoft Excel.
 
 
-Writing sql command path order:
-SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> DISTINCT -> ORDER BY -> LIMIT
+1) SQL Query Writing Order (Syntax Order)
+When writing a SQL query, the clauses are generally written in the following order:
+
+SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> ORDER BY -> LIMIT
 
 2) Execution path order:
 FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
