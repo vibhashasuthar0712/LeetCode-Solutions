@@ -9,3 +9,6 @@ SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> DISTINCT -> ORDER
 
 2) Execution path order:
 FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
+
+-------------------------------------------------------------------------------------------------------------------------------------
+SELECT
