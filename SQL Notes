@@ -8,31 +8,38 @@ It is especially useful for working with large datasets that are difficult to ma
 
 1) SQL Query Writing Order (Syntax Order)
 When writing a SQL query, the clauses are generally written in the following order:
-
 SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> ORDER BY -> LIMIT
 
-2) Execution path order:
+Note: DISTINCT is not a separate clause. It is written immediately after SELECT.
+
+2) SQL Query Execution Order
+Although we write SQL queries in one order, the database executes them in a different order:
 FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
 
 -------------------------------------------------------------------------------------------------------------------------------------
 1) (SELECT):
-SELECT is an sql command used to retrieve data from one or multiple tables in dataset.
+The SELECT statement is used to retrieve data from one or more tables in a database.
 
 Eg. display all employees data from Employees table.
     SELECT * FROM Employees;
 
-EXPLANATION: Here, we use SELECT command for retrieve all information or retrieve all columns of employee from Employees data. 
- so, SELECT : tells what we want to retrieve
-     FROM : tells from where you get this data or which table you retrieve it.
+EXPLANATION: Here, we use SELECT command for retrieve all columns of employee from Employees data. 
+ so, SELECT : specifies the columns you want to retrieve.
+     FROM : specifies the table from which the data will be retrieved.
+     
+Note: * (asterisk) means all columns of the table.
 
-Note: (*) this asteric is used when you want to retrieve all the columns of your table.
+         -----------------------------------------------------------------------------------------------------------------
 
 2) (WHERE):
-WHERE is a clause used in sql to filter rows based on specific condition. It is used within statements like SELECT , UPDATE , DELETE.
-
+The WHERE clause is used to filter rows based on a specified condition. It is commonly used with SELECT, UPDATE, and DELETE statements.
 Eg. Display the employees name who live in rajasthan.
     SELECT name FROM Employees
     WHERE state = 'Rajasthan';
 
-EXPLANATION: Here, this query returns the only employees name who live in rajasthan state. Here the where clause filter only that
-rows where state is Rajasthan.
+EXPLANATION:
+This query returns only the names of employees whose state is 'Rajasthan'.
+WHERE filters the rows.
+Only rows satisfying the condition state = 'Rajasthan' are included in the result.
+
+          ------------------------------------------------------------------------------------------------------------------
