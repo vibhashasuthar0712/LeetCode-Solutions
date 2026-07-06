@@ -11,7 +11,7 @@ SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> DISTINCT -> ORDER
 FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
 
 -------------------------------------------------------------------------------------------------------------------------------------
-(SELECT):
+1) (SELECT):
 SELECT is an sql command used to retrieve data from one or multiple tables in dataset.
 
 Eg. display all employees data from Employees table.
@@ -21,3 +21,6 @@ EXPLANATION: Here, we use SELECT command for retrieve all information or retriev
  so, SELECT : tells what we want to retrieve
      FROM : tells from where you get this data or which table you retrieve it.
             
+
+2) (WHERE):
+WHERE is a clause used in sql to filter rows based on specific condition. It is used within statements like SELECT , UPDATE , DELETE.
