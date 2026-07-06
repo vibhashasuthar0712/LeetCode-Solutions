@@ -24,3 +24,10 @@ EXPLANATION: Here, we use SELECT command for retrieve all information or retriev
 
 2) (WHERE):
 WHERE is a clause used in sql to filter rows based on specific condition. It is used within statements like SELECT , UPDATE , DELETE.
+
+Eg. Display the employees name who live in rajasthan.
+    SELECT name FROM Employees
+    WHERE state = 'Rajasthan';
+
+EXPLANATION: Here, this query returns the only employees name who live in rajasthan state. Here the where clause filter only that
+rows where state is Rajasthan.
