@@ -3,3 +3,9 @@ SQL: Structured Query Language
 
 INTRODUCTION:
 It is a type of language which we used to works with large datasets while excel is not able to handle this messy data.
+
+Writing sql command path order:
+SELECT -> FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> DISTINCT -> ORDER BY -> LIMIT
+
+2) Execution path order:
+FROM -> JOIN -> ON -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
