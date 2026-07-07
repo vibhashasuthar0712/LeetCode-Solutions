@@ -43,3 +43,9 @@ WHERE filters the rows.
 Only rows satisfying the condition state = 'Rajasthan' are included in the result.
 
           ------------------------------------------------------------------------------------------------------------------
+
+3) AND , OR , NOT 
+This are logical operators in sql. It is used when we have multiple conditions.
+*) AND : it returns when both condition are true.
+*) OR : it returns when at least one condition is true.
+*) NOT : it returns when no condition is true.
