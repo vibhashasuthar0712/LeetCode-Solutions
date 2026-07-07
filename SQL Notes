@@ -44,8 +44,10 @@ Only rows satisfying the condition state = 'Rajasthan' are included in the resul
 
           ------------------------------------------------------------------------------------------------------------------
 
-3) AND , OR , NOT 
-This are logical operators in sql. It is used when we have multiple conditions.
-*) AND : it returns when both condition are true.
-*) OR : it returns when at least one condition is true.
-*) NOT : it returns when no condition is true.
+3) AND, OR, NOT (Logical Operators)
+
+These are logical operators in SQL. They are used when we have multiple conditions in a query.
+
+AND: Returns rows only when all the conditions are true.
+OR: Returns rows when at least one condition is true.
+NOT: Returns rows when the specified condition is false (it reverses the condition).
