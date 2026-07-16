@@ -204,6 +204,8 @@ DESC → Large to small / Z–A
 You can sort by one or more columns.
 ORDER BY is usually written at the end of the query.
 
+      -----------------------------------------------------------------------------------------------------------------
+
 9) LIMIT
 Definition
 LIMIT is used to return only a specific number of rows from a table.
@@ -274,5 +276,6 @@ LIMIT skip_rows, number_of_rows;
 Example:
 
 LIMIT 5, 5;
-
 This means skip the first 5 rows and return the next 5 rows.
+
+      -----------------------------------------------------------------------------------------------------------------
