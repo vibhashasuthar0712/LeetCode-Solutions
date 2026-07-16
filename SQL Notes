@@ -103,6 +103,9 @@ Important Points
 -> It is the same as:
 WHERE salary >= 40000 AND salary <= 70000
 
+
+      -----------------------------------------------------------------------------------------------------------------
+
 7) LIKE
 Definition
 LIKE is used to search for a specific pattern in a column.
@@ -161,6 +164,8 @@ WHERE first_name NOT LIKE 'A%';
 _ → Exactly one character.
 -> LIKE is mainly used for text columns.
 -> NOT LIKE returns rows that don't match the pattern.
+
+      -----------------------------------------------------------------------------------------------------------------
 
 8) ORDER BY
 Definition
