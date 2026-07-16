@@ -61,4 +61,209 @@ IN : it is used when we have multiple value .
 NOT IN :
 
 5) BETWEEN , NOT BETWEEN 
-6)
+*)BETWEEN
+Definition
+BETWEEN is used to find values that lie between two given values. It includes both the starting and ending values.
+
+Syntax
+SELECT column_name
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+Example
+SELECT *
+FROM Employees
+WHERE salary BETWEEN 40000 AND 70000;
+
+-> This returns employees whose salary is 40000, 50000, 60000, or 70000.
+
+*)NOT BETWEEN
+
+It is used to find values outside the given range.
+
+Syntax
+SELECT column_name
+FROM table_name
+WHERE column_name NOT BETWEEN value1 AND value2;
+
+Example
+SELECT *
+FROM Employees
+WHERE age NOT BETWEEN 25 AND 35;
+
+-> This returns employees whose age is less than 25 or greater than 35.
+
+Important Points
+-> BETWEEN includes both the starting and ending values.
+-> It works with numbers, dates, and text.
+-> It is the same as:
+WHERE salary >= 40000 AND salary <= 70000
+
+7) LIKE
+Definition
+LIKE is used to search for a specific pattern in a column.
+It is mostly used with text (VARCHAR/CHAR).
+
+Syntax
+SELECT column_name
+FROM table_name
+WHERE column_name LIKE 'pattern';
+
+Wildcards Used in LIKE
+1. % (Percentage)
+Represents zero, one, or many characters.
+
+Example:
+
+SELECT *
+FROM Employees
+WHERE first_name LIKE 'A%';
+
+-> Names starting with A.
+SELECT *
+FROM Employees
+WHERE first_name LIKE '%a';
+
+-> Names ending with a.
+SELECT *
+FROM Employees
+WHERE first_name LIKE '%an%';
+
+-> Names containing an anywhere.
+
+2. _ (Underscore)
+Represents exactly one character.
+
+Example:
+
+SELECT *
+FROM Employees
+WHERE first_name LIKE '_a%';
+
+->Second letter must be a.
+
+*)NOT LIKE
+Used to find values that do not match a pattern.
+
+Example:
+SELECT *
+FROM Employees
+WHERE first_name NOT LIKE 'A%';
+
+-> Returns names that do not start with A.
+
+*)Important Points
+% → Zero or more characters.
+_ → Exactly one character.
+-> LIKE is mainly used for text columns.
+-> NOT LIKE returns rows that don't match the pattern.
+
+8) ORDER BY
+Definition
+ORDER BY is used to sort the data in ascending or descending order.
+
+Syntax
+SELECT column_name
+FROM table_name
+ORDER BY column_name;
+ASC (Ascending)
+
+Sorts data from small to large or A to Z.
+
+SELECT *
+FROM Employees
+ORDER BY salary ASC;
+
+-> ASC is the default order, so writing ASC is optional.
+-> DESC (Descending):Sorts data from large to small or Z to A.
+
+SELECT *
+FROM Employees
+ORDER BY salary DESC;
+
+-> Sorting by Multiple Columns
+SELECT *
+FROM Employees
+ORDER BY department ASC, salary DESC;
+
+First, it sorts by department (A–Z). If two employees are in the same department, it sorts them by salary (highest first).
+
+8)Important Points
+ASC → Small to large / A–Z (default)
+DESC → Large to small / Z–A
+
+You can sort by one or more columns.
+ORDER BY is usually written at the end of the query.
+
+9) LIMIT
+Definition
+LIMIT is used to return only a specific number of rows from a table.
+
+Syntax
+SELECT column_name
+FROM table_name
+LIMIT number;
+
+Example
+SELECT *
+FROM Employees
+LIMIT 5;
+
+Returns the first 5 rows.
+
+*)LIMIT with ORDER BY
+
+To get the top or bottom records, use ORDER BY before LIMIT.
+
+Highest salary
+SELECT *
+FROM Employees
+ORDER BY salary DESC
+LIMIT 1;
+
+Top 3 highest salaries
+SELECT *
+FROM Employees
+ORDER BY salary DESC
+LIMIT 3;
+
+Lowest 5 salaries
+SELECT *
+FROM Employees
+ORDER BY salary ASC
+LIMIT 5;
+
+*)LIMIT with OFFSET
+
+OFFSET is used to skip a certain number of rows before returning the result.
+
+Syntax
+SELECT *
+FROM Employees
+LIMIT number OFFSET skip_rows;
+
+Example
+SELECT *
+FROM Employees
+LIMIT 5 OFFSET 5;
+
+Skips the first 5 rows and returns the next 5 rows.
+
+Second Highest Salary
+SELECT *
+FROM Employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+*)Important Points
+LIMIT restricts the number of rows returned.
+It is commonly used with ORDER BY.
+OFFSET skips rows before returning results.
+MySQL also supports:
+LIMIT skip_rows, number_of_rows;
+
+Example:
+
+LIMIT 5, 5;
+
+This means skip the first 5 rows and return the next 5 rows.
