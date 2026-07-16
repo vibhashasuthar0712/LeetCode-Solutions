@@ -62,6 +62,8 @@ Eg. display the employee who live in delhi and salary is greater than 30000 or n
 IN : it is used when we have multiple value .
 NOT IN :
 
+                     -----------------------------------------------------------------------------------------------
+
 5) BETWEEN , NOT BETWEEN 
 *)BETWEEN
 Definition
