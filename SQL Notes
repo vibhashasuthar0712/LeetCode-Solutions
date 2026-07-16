@@ -55,6 +55,8 @@ NOT: Returns rows when the specified condition is false (it reverses the conditi
 Eg. display the employee who live in delhi and salary is greater than 30000 or not work in finance.
     SELECT * FROM EMployees WHERE city ='Delhi'AND salary = 3000 OR department <> 'Finance'.
 
+             ----------------------------------------------------------------------------------------------------
+
 4) IN , NOT IN
 
 IN : it is used when we have multiple value .
