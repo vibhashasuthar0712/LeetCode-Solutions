@@ -57,10 +57,68 @@ Eg. display the employee who live in delhi and salary is greater than 30000 or n
 
         -----------------------------------------------------------------------------------------------------------------
 
-4) IN , NOT IN
+4)IN
+Definition
+IN is used to check whether a value matches any value from a given list.
+Instead of writing multiple OR conditions, we can use IN to make the query shorter and easier to read.
 
-IN : it is used when we have multiple value .
-NOT IN :
+Syntax
+SELECT column_name
+FROM table_name
+WHERE column_name IN (value1, value2, value3);
+
+Example
+SELECT *
+FROM Employees
+WHERE department IN ('IT', 'HR', 'Finance');
+
+This returns employees whose department is IT, HR, or Finance.
+
+-> Without IN
+
+The above query can also be written as:
+
+SELECT *
+FROM Employees
+WHERE department = 'IT'
+   OR department = 'HR'
+   OR department = 'Finance';
+
+Both queries give the same result, but IN is shorter and easier to understand.
+
+*)NOT IN
+Definition
+NOT IN is used to find values that do not match any value in the given list.
+
+Syntax
+SELECT column_name
+FROM table_name
+WHERE column_name NOT IN (value1, value2, value3);
+
+Example
+SELECT *
+FROM Employees
+WHERE department NOT IN ('IT', 'HR');
+
+This returns employees whose department is not IT and not HR.
+
+-> Important Points
+IN checks if a value exists in the given list.
+NOT IN checks if a value does not exist in the given list.
+IN is a shorter and cleaner alternative to writing multiple OR conditions.
+NOT IN is a shorter and cleaner alternative to writing multiple AND conditions with != or <>.
+
+Interview Tip ⭐
+
+Instead of writing:
+
+WHERE city = 'Delhi'
+   OR city = 'Mumbai'
+   OR city = 'Jaipur'
+
+Write:
+WHERE city IN ('Delhi', 'Mumbai', 'Jaipur');
+It is more readable and is the preferred way when checking against multiple values.
 
        -----------------------------------------------------------------------------------------------------------------
 
