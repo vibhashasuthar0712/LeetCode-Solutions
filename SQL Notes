@@ -440,7 +440,6 @@ Aggregate functions are often used with GROUP BY.
 
 11) GROUP BY
 Definition
-
 GROUP BY is used to group rows that have the same value in one or more columns. It is mainly used with aggregate functions.
 
 Syntax
@@ -474,11 +473,13 @@ SELECT department, AVG(salary)
 FROM Employees
 WHERE salary > 50000
 GROUP BY department;
+
 GROUP BY with ORDER BY
 SELECT department, COUNT(*) AS total_emp
 FROM Employees
 GROUP BY department
 ORDER BY total_emp DESC;
+
 Important Points
 GROUP BY creates groups based on one or more columns.
 It is mostly used with aggregate functions.
@@ -491,7 +492,6 @@ be inside an aggregate function.
 
 12) HAVING
 Definition
-
 HAVING is used to filter grouped data after the GROUP BY clause.
 
 Difference Between WHERE and HAVING
@@ -521,6 +521,7 @@ SELECT city, AVG(salary)
 FROM Employees
 GROUP BY city
 HAVING AVG(salary) > 50000;
+
 WHERE + HAVING Together
 SELECT department, AVG(salary)
 FROM Employees
