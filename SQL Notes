@@ -552,6 +552,8 @@ HAVING avg_salary > 50000
 
 because not all databases allow aliases inside HAVING.
 
+      -----------------------------------------------------------------------------------------------------------------
+
 📌 Quick Revision
 Clause	Purpose
 COUNT()	Counts rows
@@ -562,3 +564,5 @@ MAX()	Returns largest value
 GROUP BY	Groups rows with the same value
 HAVING	Filters grouped data
 WHERE	Filters rows before grouping
+
+       -----------------------------------------------------------------------------------------------------------------
