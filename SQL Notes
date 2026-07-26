@@ -435,6 +435,9 @@ COUNT(*) counts all rows.
 COUNT(column) ignores NULL.
 SUM(), AVG(), MIN(), and MAX() ignore NULL values.
 Aggregate functions are often used with GROUP BY.
+
+          -----------------------------------------------------------------------------------------------------------------
+
 11) GROUP BY
 Definition
 
@@ -483,6 +486,9 @@ WHERE executes before GROUP BY.
 Every selected column must either:
 appear in GROUP BY, or
 be inside an aggregate function.
+
+            -----------------------------------------------------------------------------------------------------------------
+
 12) HAVING
 Definition
 
