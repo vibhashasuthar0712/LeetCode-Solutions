@@ -337,3 +337,222 @@ LIMIT 5, 5;
 This means skip the first 5 rows and return the next 5 rows.
 
       -----------------------------------------------------------------------------------------------------------------
+
+10) Aggregate Functions
+Definition
+
+Aggregate Functions perform a calculation on multiple rows and return a single value.
+
+They are mainly used to calculate totals, averages, highest values, lowest values, and counts.
+
+Types of Aggregate Functions
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+1. COUNT()
+Definition
+
+COUNT() is used to count the number of rows.
+
+Syntax
+SELECT COUNT(column_name)
+FROM table_name;
+Example
+SELECT COUNT(*)
+FROM Employees;
+
+Returns the total number of employees.
+
+COUNT(*) vs COUNT(column)
+COUNT(*) → Counts all rows, including rows containing NULL values.
+COUNT(column) → Counts only non-NULL values in that column.
+2. SUM()
+Definition
+
+SUM() is used to calculate the total of a numeric column.
+
+Syntax
+SELECT SUM(column_name)
+FROM table_name;
+Example
+SELECT SUM(salary)
+FROM Employees;
+
+Returns the total salary of all employees.
+
+3. AVG()
+Definition
+
+AVG() is used to calculate the average value of a numeric column.
+
+Syntax
+SELECT AVG(column_name)
+FROM table_name;
+Example
+SELECT AVG(salary)
+FROM Employees;
+
+Round to 2 decimal places:
+
+SELECT ROUND(AVG(salary),2)
+FROM Employees;
+4. MIN()
+Definition
+
+MIN() returns the smallest value from a column.
+
+Example
+SELECT MIN(salary)
+FROM Employees;
+
+Returns the lowest salary.
+
+5. MAX()
+Definition
+
+MAX() returns the largest value from a column.
+
+Example
+SELECT MAX(salary)
+FROM Employees;
+
+Returns the highest salary.
+
+Aggregate Functions with WHERE
+
+We can filter rows before performing the calculation.
+
+Example
+
+SELECT AVG(salary)
+FROM Employees
+WHERE department = 'IT';
+Important Points
+Aggregate functions return one value.
+COUNT(*) counts all rows.
+COUNT(column) ignores NULL.
+SUM(), AVG(), MIN(), and MAX() ignore NULL values.
+Aggregate functions are often used with GROUP BY.
+11) GROUP BY
+Definition
+
+GROUP BY is used to group rows that have the same value in one or more columns. It is mainly used with aggregate functions.
+
+Syntax
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+GROUP BY column_name;
+Example
+
+Count employees in each department.
+
+SELECT department, COUNT(*)
+FROM Employees
+GROUP BY department;
+
+Find total salary of each department.
+
+SELECT department, SUM(salary)
+FROM Employees
+GROUP BY department;
+
+Find average salary of each city.
+
+SELECT city, AVG(salary)
+FROM Employees
+GROUP BY city;
+GROUP BY with WHERE
+
+WHERE filters rows before grouping.
+
+SELECT department, AVG(salary)
+FROM Employees
+WHERE salary > 50000
+GROUP BY department;
+GROUP BY with ORDER BY
+SELECT department, COUNT(*) AS total_emp
+FROM Employees
+GROUP BY department
+ORDER BY total_emp DESC;
+Important Points
+GROUP BY creates groups based on one or more columns.
+It is mostly used with aggregate functions.
+WHERE executes before GROUP BY.
+Every selected column must either:
+appear in GROUP BY, or
+be inside an aggregate function.
+12) HAVING
+Definition
+
+HAVING is used to filter grouped data after the GROUP BY clause.
+
+Difference Between WHERE and HAVING
+WHERE	HAVING
+Filters rows	Filters groups
+Executes before GROUP BY	Executes after GROUP BY
+Cannot use aggregate functions	Can use aggregate functions
+Can be used without GROUP BY	Usually used with GROUP BY
+Syntax
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+GROUP BY column_name
+HAVING condition;
+Example
+
+Departments having more than 5 employees.
+
+SELECT department, COUNT(*)
+FROM Employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+
+Cities whose average salary is greater than 50000.
+
+SELECT city, AVG(salary)
+FROM Employees
+GROUP BY city
+HAVING AVG(salary) > 50000;
+WHERE + HAVING Together
+SELECT department, AVG(salary)
+FROM Employees
+WHERE salary > 40000
+GROUP BY department
+HAVING AVG(salary) > 60000;
+SQL Execution Order
+FROM
+↓
+WHERE
+↓
+GROUP BY
+↓
+HAVING
+↓
+SELECT
+↓
+ORDER BY
+Important Points
+WHERE filters rows.
+HAVING filters groups.
+HAVING is mostly used with aggregate functions.
+WHERE and HAVING can be used together.
+For better compatibility across different databases, write:
+HAVING AVG(salary) > 50000
+
+instead of
+
+HAVING avg_salary > 50000
+
+because not all databases allow aliases inside HAVING.
+
+📌 Quick Revision
+Clause	Purpose
+COUNT()	Counts rows
+SUM()	Adds numeric values
+AVG()	Calculates average
+MIN()	Returns smallest value
+MAX()	Returns largest value
+GROUP BY	Groups rows with the same value
+HAVING	Filters grouped data
+WHERE	Filters rows before grouping
