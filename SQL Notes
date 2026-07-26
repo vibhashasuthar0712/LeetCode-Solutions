@@ -526,6 +526,7 @@ FROM Employees
 WHERE salary > 40000
 GROUP BY department
 HAVING AVG(salary) > 60000;
+
 SQL Execution Order
 FROM
 ↓
@@ -538,6 +539,7 @@ HAVING
 SELECT
 ↓
 ORDER BY
+
 Important Points
 WHERE filters rows.
 HAVING filters groups.
@@ -547,9 +549,7 @@ For better compatibility across different databases, write:
 HAVING AVG(salary) > 50000
 
 instead of
-
 HAVING avg_salary > 50000
-
 because not all databases allow aliases inside HAVING.
 
       -----------------------------------------------------------------------------------------------------------------
