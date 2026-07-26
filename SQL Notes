@@ -495,11 +495,12 @@ Definition
 HAVING is used to filter grouped data after the GROUP BY clause.
 
 Difference Between WHERE and HAVING
-WHERE	HAVING
-Filters rows	Filters groups
-Executes before GROUP BY	Executes after GROUP BY
-Cannot use aggregate functions	Can use aggregate functions
-Can be used without GROUP BY	Usually used with GROUP BY
+             WHERE	                                                                            HAVING
+Filters rows	                                                                        Filters groups
+Executes before GROUP BY                                                               	Executes after GROUP BY
+Cannot use aggregate functions	                                                        Can use aggregate functions
+Can be used without GROUP BY	                                                        Usually used with GROUP BY
+
 Syntax
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
