@@ -610,9 +610,7 @@ SELF JOIN
 
 1. INNER JOIN
 Definition
-
 Returns only the matching rows from both tables.
-
 If there is no match, the row is ignored.
 
 Syntax
@@ -638,28 +636,24 @@ Neha	IT
 Rahul	Sales
 
 Priya is removed because Dept_ID = 104 doesn't exist.
-
 Finance is removed because no employee belongs to it.
+
 
 2. LEFT JOIN
 Definition
-
 Returns:
-
 All rows from the left table
 Matching rows from the right table
 
 If no match exists, NULL is returned.
 
 Syntax
-
 SELECT *
 FROM table1
 LEFT JOIN table2
 ON table1.column = table2.column;
 
 Example
-
 SELECT e.Name,
        d.Department
 FROM Employees e
@@ -667,12 +661,13 @@ LEFT JOIN Departments d
 ON e.Dept_ID=d.Dept_ID;
 
 Output
-
 Name	Department
 Amit	HR
 Neha	IT
 Rahul	Sales
 Priya	NULL
+
+
 3. RIGHT JOIN
 Definition
 
