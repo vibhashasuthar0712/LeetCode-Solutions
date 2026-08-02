@@ -836,16 +836,14 @@ Answer:
 
 INNER JOIN returns only matching records.
 LEFT JOIN returns all rows from the left table plus matching rows from the right table. Unmatched right-side values become NULL.
-Q2. Which JOIN returns all rows from both tables?
 
+Q2. Which JOIN returns all rows from both tables?
 Answer: FULL OUTER JOIN.
 
 Q3. Which JOIN creates a Cartesian Product?
-
 Answer: CROSS JOIN.
 
 Q4. Why do we use aliases (AS)?
-
 To make queries shorter, cleaner, and easier to read.
 
 Example:
@@ -854,12 +852,11 @@ SELECT e.Name, d.Department
 FROM Employees e
 JOIN Departments d
 ON e.Dept_ID = d.Dept_ID;
-Q5. What is a Cartesian Product?
 
+Q5. What is a Cartesian Product?
 Every row of the first table combines with every row of the second table.
 
 Example:
-
 3 rows × 5 rows = 15 rows.
 
 Memory Trick
