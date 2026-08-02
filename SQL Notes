@@ -739,17 +739,15 @@ Result
 4 × 4 = 16 rows
 
 Syntax
-
 SELECT *
 FROM Employees
 CROSS JOIN Departments;
+
 6. SELF JOIN
 Definition
-
 A table joins with itself.
 
 Mostly used for:
-
 Employee–Manager relationships
 Parent–Child relationships
 Category hierarchies
@@ -764,7 +762,6 @@ ID	Name	Manager_ID
 3	Bob	1
 
 Query
-
 SELECT e.Name AS Employee,
        m.Name AS Manager
 FROM Employees e
@@ -774,31 +771,29 @@ ON e.Manager_ID=m.Emp_ID;
 Output
 
 Employee	Manager
-John	NULL
-Alice	John
-Bob	John
+John	     NULL
+Alice	     John
+Bob	         John
+
+
 JOIN Keywords
+
 ON
-
 Used to specify the matching condition.
-
 ON Employees.Dept_ID = Departments.Dept_ID
+
 AS
-
 Creates aliases.
-
 Employees AS e
 Departments AS d
 
 Instead of
-
 Employees.Dept_ID
 
 we write
-
 e.Dept_ID
-JOIN Execution Order
 
+JOIN Execution Order
 FROM
 ↓
 JOIN
