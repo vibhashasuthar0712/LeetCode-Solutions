@@ -863,14 +863,10 @@ Example:
 3 rows × 5 rows = 15 rows.
 
 Memory Trick
+
 INNER JOIN  → Only Match
-
 LEFT JOIN   → Keep Left
-
 RIGHT JOIN  → Keep Right
-
 FULL JOIN   → Keep Both
-
 CROSS JOIN  → Everything × Everything
-
 SELF JOIN   → Table joins itself
