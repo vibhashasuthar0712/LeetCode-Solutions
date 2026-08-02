@@ -798,6 +798,7 @@ we write
 
 e.Dept_ID
 JOIN Execution Order
+
 FROM
 ↓
 JOIN
@@ -815,11 +816,15 @@ SELECT
 ORDER BY
 ↓
 LIMIT
+
+
 INNER JOIN vs LEFT JOIN
-INNER JOIN	LEFT JOIN
-Only matching rows	All rows from the left table
-Removes unmatched rows	Keeps unmatched rows from the left table 
-Most commonly used	Useful when you want every record from the left table
+
+    INNER JOIN	                                                       LEFT JOIN
+Only matching rows	                                     All rows from the left table
+Removes unmatched rows	                                 Keeps unmatched rows from the left table 
+Most commonly used                                     	Useful when you want every record from the left table
+
 
 LEFT JOIN vs RIGHT JOIN
 
