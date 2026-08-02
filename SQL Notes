@@ -592,13 +592,13 @@ In real databases, data is stored in different tables to avoid duplication.
 Example:
 
 Instead of storing department names with every employee, we store:
-
 Employee details in one table
 Department details in another table
 
 Then we use JOIN to combine them.
 
 Types of SQL JOIN
+
 INNER JOIN
 LEFT JOIN
 RIGHT JOIN
