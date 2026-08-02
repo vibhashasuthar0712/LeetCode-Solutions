@@ -823,18 +823,20 @@ LIMIT
 INNER JOIN vs LEFT JOIN
 INNER JOIN	LEFT JOIN
 Only matching rows	All rows from the left table
-Removes unmatched rows	Keeps unmatched rows from the left table
+Removes unmatched rows	Keeps unmatched rows from the left table 
 Most commonly used	Useful when you want every record from the left table
+
 LEFT JOIN vs RIGHT JOIN
+
 LEFT JOIN	RIGHT JOIN
+
 Keeps left table	Keeps right table
 Most commonly used	Used less frequently
+
 Common Interview Questions
+
 Q1. What is the difference between INNER JOIN and LEFT JOIN?
-
-Answer:
-
-INNER JOIN returns only matching records.
+Answer: INNER JOIN returns only matching records.
 LEFT JOIN returns all rows from the left table plus matching rows from the right table. Unmatched right-side values become NULL.
 
 Q2. Which JOIN returns all rows from both tables?
