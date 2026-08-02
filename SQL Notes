@@ -493,6 +493,7 @@ Definition
 HAVING is used to filter grouped data after the GROUP BY clause.
 
 Difference Between WHERE and HAVING
+
              WHERE	                                                                            HAVING
 Filters rows	                                                                        Filters groups
 Executes before GROUP BY                                                               	Executes after GROUP BY
