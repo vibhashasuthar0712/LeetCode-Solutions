@@ -685,12 +685,12 @@ RIGHT JOIN Departments d
 ON e.Dept_ID=d.Dept_ID;
 
 Output
-
 Name	Department
 Amit	HR
 Neha	IT
 Rahul	Sales
 NULL	Finance
+
 4. FULL OUTER JOIN
 Definition
 
@@ -721,21 +721,17 @@ Note: MySQL does not support FULL OUTER JOIN directly. It is commonly simulated 
 
 5. CROSS JOIN
 Definition
-
 Returns every row of the first table with every row of the second table.
 
 Formula:
-
 Rows = Table1 × Table2
 
 Example
 
 Employees = 4 rows
-
 Departments = 4 rows
 
 Result
-
 4 × 4 = 16 rows
 
 Syntax
