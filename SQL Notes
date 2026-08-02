@@ -860,3 +860,5 @@ RIGHT JOIN  → Keep Right
 FULL JOIN   → Keep Both
 CROSS JOIN  → Everything × Everything
 SELF JOIN   → Table joins itself
+
+-------------------------------------------------------------------------------------------------------------------------------------
