@@ -605,3 +605,272 @@ RIGHT JOIN
 FULL OUTER JOIN
 CROSS JOIN
 SELF JOIN
+
+
+
+1. INNER JOIN
+Definition
+
+Returns only the matching rows from both tables.
+
+If there is no match, the row is ignored.
+
+Syntax
+
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.column = table2.column;
+
+Example
+
+SELECT e.Name,
+       d.Department
+FROM Employees e
+INNER JOIN Departments d
+ON e.Dept_ID = d.Dept_ID;
+
+Output
+
+Name	Department
+Amit	HR
+Neha	IT
+Rahul	Sales
+
+Priya is removed because Dept_ID = 104 doesn't exist.
+
+Finance is removed because no employee belongs to it.
+
+2. LEFT JOIN
+Definition
+
+Returns:
+
+All rows from the left table
+Matching rows from the right table
+
+If no match exists, NULL is returned.
+
+Syntax
+
+SELECT *
+FROM table1
+LEFT JOIN table2
+ON table1.column = table2.column;
+
+Example
+
+SELECT e.Name,
+       d.Department
+FROM Employees e
+LEFT JOIN Departments d
+ON e.Dept_ID=d.Dept_ID;
+
+Output
+
+Name	Department
+Amit	HR
+Neha	IT
+Rahul	Sales
+Priya	NULL
+3. RIGHT JOIN
+Definition
+
+Returns:
+
+All rows from the right table
+Matching rows from the left table
+
+Example
+
+SELECT e.Name,
+       d.Department
+FROM Employees e
+RIGHT JOIN Departments d
+ON e.Dept_ID=d.Dept_ID;
+
+Output
+
+Name	Department
+Amit	HR
+Neha	IT
+Rahul	Sales
+NULL	Finance
+4. FULL OUTER JOIN
+Definition
+
+Returns:
+
+All rows from the left table
+All rows from the right table
+Matching rows are merged
+Missing values become NULL
+
+Syntax
+
+SELECT *
+FROM Employees
+FULL OUTER JOIN Departments
+ON Employees.Dept_ID=Departments.Dept_ID;
+
+Output
+
+Name	Department
+Amit	HR
+Neha	IT
+Rahul	Sales
+Priya	NULL
+NULL	Finance
+
+Note: MySQL does not support FULL OUTER JOIN directly. It is commonly simulated using LEFT JOIN UNION RIGHT JOIN.
+
+5. CROSS JOIN
+Definition
+
+Returns every row of the first table with every row of the second table.
+
+Formula:
+
+Rows = Table1 × Table2
+
+Example
+
+Employees = 4 rows
+
+Departments = 4 rows
+
+Result
+
+4 × 4 = 16 rows
+
+Syntax
+
+SELECT *
+FROM Employees
+CROSS JOIN Departments;
+6. SELF JOIN
+Definition
+
+A table joins with itself.
+
+Mostly used for:
+
+Employee–Manager relationships
+Parent–Child relationships
+Category hierarchies
+
+Example
+
+Employee Table
+
+ID	Name	Manager_ID
+1	John	NULL
+2	Alice	1
+3	Bob	1
+
+Query
+
+SELECT e.Name AS Employee,
+       m.Name AS Manager
+FROM Employees e
+LEFT JOIN Employees m
+ON e.Manager_ID=m.Emp_ID;
+
+Output
+
+Employee	Manager
+John	NULL
+Alice	John
+Bob	John
+JOIN Keywords
+ON
+
+Used to specify the matching condition.
+
+ON Employees.Dept_ID = Departments.Dept_ID
+AS
+
+Creates aliases.
+
+Employees AS e
+Departments AS d
+
+Instead of
+
+Employees.Dept_ID
+
+we write
+
+e.Dept_ID
+JOIN Execution Order
+FROM
+↓
+JOIN
+↓
+ON
+↓
+WHERE
+↓
+GROUP BY
+↓
+HAVING
+↓
+SELECT
+↓
+ORDER BY
+↓
+LIMIT
+INNER JOIN vs LEFT JOIN
+INNER JOIN	LEFT JOIN
+Only matching rows	All rows from the left table
+Removes unmatched rows	Keeps unmatched rows from the left table
+Most commonly used	Useful when you want every record from the left table
+LEFT JOIN vs RIGHT JOIN
+LEFT JOIN	RIGHT JOIN
+Keeps left table	Keeps right table
+Most commonly used	Used less frequently
+Common Interview Questions
+Q1. What is the difference between INNER JOIN and LEFT JOIN?
+
+Answer:
+
+INNER JOIN returns only matching records.
+LEFT JOIN returns all rows from the left table plus matching rows from the right table. Unmatched right-side values become NULL.
+Q2. Which JOIN returns all rows from both tables?
+
+Answer: FULL OUTER JOIN.
+
+Q3. Which JOIN creates a Cartesian Product?
+
+Answer: CROSS JOIN.
+
+Q4. Why do we use aliases (AS)?
+
+To make queries shorter, cleaner, and easier to read.
+
+Example:
+
+SELECT e.Name, d.Department
+FROM Employees e
+JOIN Departments d
+ON e.Dept_ID = d.Dept_ID;
+Q5. What is a Cartesian Product?
+
+Every row of the first table combines with every row of the second table.
+
+Example:
+
+3 rows × 5 rows = 15 rows.
+
+Memory Trick
+INNER JOIN  → Only Match
+
+LEFT JOIN   → Keep Left
+
+RIGHT JOIN  → Keep Right
+
+FULL JOIN   → Keep Both
+
+CROSS JOIN  → Everything × Everything
+
+SELF JOIN   → Table joins itself
