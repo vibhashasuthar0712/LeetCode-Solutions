@@ -828,10 +828,10 @@ Most commonly used	Useful when you want every record from the left table
 
 LEFT JOIN vs RIGHT JOIN
 
-LEFT JOIN	RIGHT JOIN
-
-Keeps left table	Keeps right table
-Most commonly used	Used less frequently
+                                  LEFT JOIN	                 RIGHT JOIN
+                                
+                                Keeps left table	       Keeps right table
+                                Most commonly used	       Used less frequently
 
 Common Interview Questions
 
