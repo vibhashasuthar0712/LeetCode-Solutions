@@ -571,7 +571,6 @@ WHERE	Filters rows before grouping
 1. What is a JOIN?
 
 Definition:
-
 A JOIN is used to combine rows from two or more tables based on a related column.
 
 Think of it as connecting tables using a common key.
@@ -588,7 +587,6 @@ Emp_ID Name Dept_ID           Dept_ID Department
 The common column is Dept_ID.
 
 Why do we need JOINS?
-
 In real databases, data is stored in different tables to avoid duplication.
 
 Example:
