@@ -567,3 +567,43 @@ HAVING	Filters grouped data
 WHERE	Filters rows before grouping
 
        -----------------------------------------------------------------------------------------------------------------
+
+1. What is a JOIN?
+
+Definition:
+
+A JOIN is used to combine rows from two or more tables based on a related column.
+
+Think of it as connecting tables using a common key.
+
+Example:
+
+Employees Table               Departments Table
+
+Emp_ID Name Dept_ID           Dept_ID Department
+1      A      101             101     HR
+2      B      102             102     IT
+3      C      103             103     Sales
+
+The common column is Dept_ID.
+
+Why do we need JOINS?
+
+In real databases, data is stored in different tables to avoid duplication.
+
+Example:
+
+Instead of storing department names with every employee, we store:
+
+Employee details in one table
+Department details in another table
+
+Then we use JOIN to combine them.
+
+Types of SQL JOIN
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL OUTER JOIN
+CROSS JOIN
+SELF JOIN
